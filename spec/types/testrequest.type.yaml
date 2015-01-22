@@ -1,0 +1,44 @@
+testrequest:
+    description: Test request is sent by buildbot to a test executor service
+    type: dict
+    kids:
+        uuids:
+            description: |
+                Identification for this buildrequest.
+                This is a basically a random number created by the creator of the request
+                uuid helps with sorting out answers to the requests
+            type: string
+
+        patch_lifecycle_state:
+            description: Where in the patch lifecycle the request is from
+            type: string
+            values:
+            - engineering
+            - preintegration
+            - premerge
+            - mergerequest
+            - daily_candidate
+            - daily
+            - weekly_candidate
+            - weekly
+            required: true
+
+        mandatory_boards:
+            description: boards to test as a mandatory
+            type: setofstrings
+            default: []
+
+        secondary_boards:
+            description: boards to test as secondary (dont wait for results)
+            type: setofstrings
+            default: []
+
+        domains:
+            description: list of domains the patches of the build are modifying
+            type: setofstrings
+            default: []
+
+        requested_testplan:
+            description: list of testplans requested to test on top of the normal automatically selected tests
+            type: setofstrings
+            default: []

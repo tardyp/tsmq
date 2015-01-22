@@ -1,0 +1,11 @@
+div 
+    h2 messages
+    ul(ng-repeat="(name, message) in messages")
+        b {{name}}
+        | {{message}}
+
+    h2 Types
+    ul(ng-repeat="(name, type) in types")
+        b {{name}}
+        | {{type}}
+    

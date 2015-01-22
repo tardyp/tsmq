@@ -1,0 +1,7 @@
+imports:
+- amqpmessage.type.yaml
+
+root:
+    type: mapofamqpmessages
+    description: |
+        messages supported by test services

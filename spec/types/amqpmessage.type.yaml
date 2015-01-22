@@ -1,0 +1,10 @@
+amqpmessage:
+    description: Type of amqp message this route is about
+    type: dict
+    kids:
+        endpoint:
+            type: string
+            required: true
+        datatype:
+            type: string
+            required: true

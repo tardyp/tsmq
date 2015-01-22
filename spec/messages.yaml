@@ -1,0 +1,7 @@
+testrequest:
+    endpoint: testservices.testrequest
+    datatype: testrequest
+
+testrequeststatus:
+    endpoint: testservices.testrequest.:uuid
+    datatype: testrequeststatus
